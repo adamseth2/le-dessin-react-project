@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/adamseth2/le-dessin-react-project/static/css/main.bb5f9278.chunk.css",
-    "main.js": "/adamseth2/le-dessin-react-project/static/js/main.35d25527.chunk.js",
-    "main.js.map": "/adamseth2/le-dessin-react-project/static/js/main.35d25527.chunk.js.map",
-    "runtime-main.js": "/adamseth2/le-dessin-react-project/static/js/runtime-main.b9501789.js",
-    "runtime-main.js.map": "/adamseth2/le-dessin-react-project/static/js/runtime-main.b9501789.js.map",
-    "static/css/2.266932d3.chunk.css": "/adamseth2/le-dessin-react-project/static/css/2.266932d3.chunk.css",
-    "static/js/2.3701f1c4.chunk.js": "/adamseth2/le-dessin-react-project/static/js/2.3701f1c4.chunk.js",
-    "static/js/2.3701f1c4.chunk.js.map": "/adamseth2/le-dessin-react-project/static/js/2.3701f1c4.chunk.js.map",
-    "index.html": "/adamseth2/le-dessin-react-project/index.html",
-    "precache-manifest.09c69bca7809ae0030d23ca6a9854d95.js": "/adamseth2/le-dessin-react-project/precache-manifest.09c69bca7809ae0030d23ca6a9854d95.js",
-    "service-worker.js": "/adamseth2/le-dessin-react-project/service-worker.js",
-    "static/css/2.266932d3.chunk.css.map": "/adamseth2/le-dessin-react-project/static/css/2.266932d3.chunk.css.map",
-    "static/css/main.bb5f9278.chunk.css.map": "/adamseth2/le-dessin-react-project/static/css/main.bb5f9278.chunk.css.map",
-    "static/js/2.3701f1c4.chunk.js.LICENSE.txt": "/adamseth2/le-dessin-react-project/static/js/2.3701f1c4.chunk.js.LICENSE.txt",
-    "static/media/font-awesome.min.css": "/adamseth2/le-dessin-react-project/static/media/fontawesome-webfont.fee66e71.woff"
+    "main.css": "/le-dessin-react-project/static/css/main.bb5f9278.chunk.css",
+    "main.js": "/le-dessin-react-project/static/js/main.35d25527.chunk.js",
+    "main.js.map": "/le-dessin-react-project/static/js/main.35d25527.chunk.js.map",
+    "runtime-main.js": "/le-dessin-react-project/static/js/runtime-main.478d47c5.js",
+    "runtime-main.js.map": "/le-dessin-react-project/static/js/runtime-main.478d47c5.js.map",
+    "static/css/2.51d72e0c.chunk.css": "/le-dessin-react-project/static/css/2.51d72e0c.chunk.css",
+    "static/js/2.73ebe4c3.chunk.js": "/le-dessin-react-project/static/js/2.73ebe4c3.chunk.js",
+    "static/js/2.73ebe4c3.chunk.js.map": "/le-dessin-react-project/static/js/2.73ebe4c3.chunk.js.map",
+    "index.html": "/le-dessin-react-project/index.html",
+    "precache-manifest.9fa71355580c9aa29163161e518a5c81.js": "/le-dessin-react-project/precache-manifest.9fa71355580c9aa29163161e518a5c81.js",
+    "service-worker.js": "/le-dessin-react-project/service-worker.js",
+    "static/css/2.51d72e0c.chunk.css.map": "/le-dessin-react-project/static/css/2.51d72e0c.chunk.css.map",
+    "static/css/main.bb5f9278.chunk.css.map": "/le-dessin-react-project/static/css/main.bb5f9278.chunk.css.map",
+    "static/js/2.73ebe4c3.chunk.js.LICENSE.txt": "/le-dessin-react-project/static/js/2.73ebe4c3.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/le-dessin-react-project/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.b9501789.js",
-    "static/css/2.266932d3.chunk.css",
-    "static/js/2.3701f1c4.chunk.js",
+    "static/js/runtime-main.478d47c5.js",
+    "static/css/2.51d72e0c.chunk.css",
+    "static/js/2.73ebe4c3.chunk.js",
     "static/css/main.bb5f9278.chunk.css",
     "static/js/main.35d25527.chunk.js"
   ]
