@@ -1,0 +1,16 @@
+@import './default/default.scss';
+
+#log-in-title {
+    margin: 4rem 0 10% 0;
+    h1 {
+        margin-bottom: 20%;
+        display: block;
+        position: relative;
+        
+        &::after {
+            @include line-under(90%);
+        }
+        
+    }
+    
+}

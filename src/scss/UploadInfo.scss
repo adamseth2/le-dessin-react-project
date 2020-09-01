@@ -1,0 +1,108 @@
+@import './default/default';
+
+#upload-info {
+    
+    input,
+    #description {
+        height: 3ch;
+        width: 100%;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+        &:focus {
+            outline: 1px solid black;
+        }
+    }
+    input {
+        padding: 1.2rem 0.5rem;
+    }
+    #description {
+        height: 20ch;
+        resize: none;
+        font-size: 1rem;
+        padding: 0.5rem;
+        font-family: 'Roboto', sans-serif;
+    }
+    .input-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        label {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+        }
+        .input-valid {
+            bottom:0.5rem;
+        }
+        
+    }
+    .small-container {
+        width: 40%;
+    }
+    .medium-container {
+        width: 50%;
+    }
+    .two-row-container {
+        display: flex;
+        justify-content: space-between;
+
+        
+    }
+    #price-container {
+        position: relative;
+        #currency-symbol {
+                position:absolute;
+                left: 2%;
+                background-color: $light-color;
+                color: black;
+                font-size: 1.1rem
+                
+
+            }
+        #price {
+            text-align:right;
+            padding: 0 0.6rem 0 0.4rem;
+        }
+    }
+    #dimension-container {
+        display: flex;
+        #first-dimension,
+        #second-dimension {
+            width: 6ch;
+            margin: 0;
+            font-size: 0.9rem;
+            padding: 0.9rem 0.3rem;
+            // padding: 1rem 2rem;
+        }
+        .x {
+            padding: 0 0.4rem;
+            font-size: 1.2rem;
+            font-weight: normal;
+            font-family: sans-serif;
+            position: relative;
+            // top: -0.2rem;
+        }
+        #unit-of-measure {
+            margin-left: 0.5rem;
+            height: 1.8rem;
+            font-size: 0.9rem;
+            &:hover,
+            &:focus {
+                outline: black 1px solid;
+            }
+        }
+    }
+}
+
+//Media query
+// #price-container {
+//     flex: 1;
+// .big-container {
+//     flex: 2;
+// }
+// .small-container {
+//     flex: 1;
+// }
+
+// .two-row-container {
+//     display: flex;
+// }

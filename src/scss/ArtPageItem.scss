@@ -1,0 +1,97 @@
+@import './default/default.scss';
+#art-page-item {
+  text-align: center;
+  margin: 3rem 1rem 0 1rem;
+
+  .art-item-photo {
+    width: 100%;
+    max-height: 400px;
+    object-fit: scale-down;
+    cursor: pointer;
+  }
+  .column-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10% 0 0;
+    align-items: top;
+    .price {
+      text-align: left;
+      font-weight: normal;
+      font-size: 1.7rem;
+      margin-bottom: 0.5rem;
+      &::before {
+        vertical-align: top;
+        font-weight: bold;
+        font-size: 1.2rem;
+        content: '$';
+      }
+    }
+    .artist {
+      color: rgba(black, 0.5);
+    }
+  }
+  .title {
+    font-size: 1.5rem;
+    vertical-align: bottom;
+    font-weight: normal;
+    margin-bottom: 0.2rem;
+    text-align: left;
+    font-family: $header-font;
+  }
+  
+ 
+
+  
+  .description {
+    font-style: italic;   
+    margin-bottom: 4rem;
+    font-size: 1.2rem; 
+  }
+  .infomation-title {
+    position: relative;
+    margin-bottom: 3rem;
+
+  &::after {
+    @include line-under(30%);
+    }
+  }
+  .infomation {
+    list-style: none;
+    font-weight: normal;
+    border-collapse: collapse;
+    width:100%;
+    
+    tr {
+      border-bottom: $light-dark-color dotted 2px; 
+    }
+    th:first-child {
+      font-size: 1.2rem;
+    }
+    th:last-child {
+      font-style: italic;
+    }
+    th {
+      font-weight: normal;
+      text-align: left;
+      padding-right: 2rem;
+      
+    }
+
+    li {
+      // font-weight: bold;
+      // font-size:
+      p {
+        font-weight: 400;
+      }
+    }
+  }
+
+  .buy-now {
+    margin-top: 3rem;
+    border: none;
+    padding: 0.5rem;
+    color: white;
+    background-color: $dark-third-color;
+    margin-bottom: 5rem;
+  }
+}

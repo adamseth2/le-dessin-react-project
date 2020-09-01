@@ -1,0 +1,13 @@
+@import "./default/default.scss";
+
+.upload-title {
+  margin-top: 3rem;
+  margin-bottom: 5em;
+  h1 {
+    position: relative;
+    text-align: center;
+    &::after {
+      @include line-under(60%);
+    }
+  }
+}

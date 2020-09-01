@@ -1,0 +1,40 @@
+@import './default/default.scss';
+.gallery-photo {
+  color: white;
+  box-shadow: 0px 10px 10px 0 rgba(0,0,0,0.3);
+  transition: 0.5s;
+  margin-bottom: 1rem;
+  &:hover {
+    transform: scale(1.1);
+  }
+  img{
+    width: 100%;
+    max-height: 200px;
+    object-fit: scale-down;
+  }
+  .caption-box {
+    background-color: $dark-third-color;
+    padding: 0 0.2rem;
+    h3 {
+      font-size: 1.4rem;
+      font-family: $header-font;
+      font-weight: 400;
+    }
+    .description {
+      // font-family: 'EB Garamond', serif;
+      // font-family: 'Crimson Text', serif;
+      // font-weight: 400;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+    .price {
+      font-size: 1.3rem;
+      font-family: $caption-font;
+  
+      &::before {
+        content: '$ ';
+      }
+  }
+  
+  }
+}

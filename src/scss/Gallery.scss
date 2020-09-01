@@ -1,0 +1,16 @@
+@import './default/default.scss';
+
+#gallery {
+    text-align: center;
+    margin: 8rem 3rem 4rem 3rem;
+    h1 {
+        position: relative;
+        margin-bottom: 3rem;
+        font-family: 'Roboto Slab', serif;
+        &::after {
+            @include line-under(60%);
+        }
+    }
+
+}
+

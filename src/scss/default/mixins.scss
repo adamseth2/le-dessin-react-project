@@ -1,0 +1,9 @@
+@mixin line-under($percent) {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50% -($percent/2);
+    width: $percent;
+    height: 0.25rem;
+    background-color: $third-color;
+}

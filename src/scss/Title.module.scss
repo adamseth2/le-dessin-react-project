@@ -1,0 +1,30 @@
+@import "./default/default";
+
+.title {
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: row;
+  text-align: center;
+  margin: 5rem 0.8rem 0 0.8rem;
+  position: relative;
+  h2 {
+    // font-family: "Roboto", serif;
+    font-weight: normal;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    font-weight: 400;
+    &::before {
+      content: '"'
+    }
+    &::after {
+      content: '"'
+    }
+  }
+  p {
+    font-style: italic;
+    font-size: 1.3rem
+  }
+  &::after {
+    @include line-under(20%);
+  }
+}

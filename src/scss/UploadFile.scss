@@ -1,0 +1,50 @@
+@import "./default/default.scss";
+@import "./Input.scss";
+#upload-file {
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+  .file-upload-container {
+    .fake-file-upload {
+        position: relative;
+        padding: 0.5rem 1rem;
+        color: $light-color;
+        background-color: $dark-light-color;
+        &:hover {
+            background-color: $third-color;
+        }
+    }
+    #file-upload {
+        &:focus + .fake-file-upload {
+            border: black 1px solid;
+            
+        }
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+
+    
+}
+.output {
+    .error,
+    .file {
+        font-weight: normal;
+        font-size: 0.9rem;
+
+    }
+        h3 {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            display: block;
+            transform: translateX(-50%);
+            width: 100%;        
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            display: block;
+            transform: translateX(-50%);
+        }
+    }   
+}

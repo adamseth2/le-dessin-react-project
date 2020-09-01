@@ -1,0 +1,81 @@
+@import './default/default.scss';
+form {
+  input:focus {
+    outline: black 1px solid;
+
+  }
+  .input-container {
+    position: relative;
+  
+    input[type=text],
+    input[type=password] {
+      font-size: 1.2em;
+      background-color: transparent;
+      border: none;
+      border-bottom: $dark-color 3px solid;
+      width: 100%;
+      margin: 1em 0;
+      padding: 0.5em 0.25em 0.25em 0.5em;
+      
+      &:focus {
+        outline: none;
+      }
+    }
+
+    input:focus ~ label,
+    input:valid ~ label {
+      top: 0rem;
+      font-weight: bold;
+      color: $third-color;
+    }
+    input:focus {
+      border-bottom-color: $third-color;
+    }
+    .input-header {
+      font-size: 20rem;
+    }
+    label {
+      position: absolute;
+      top: 1.5rem;
+      left: 0.5rem;
+      // font-size: 1.2rem;
+      font-family: sans-serif;
+      color: #999;
+      transition: 0.5s;
+      cursor: text;
+    }
+  }
+}
+button,
+input[type=submit] {
+  position: relative;
+  background-color: transparent;
+  border: solid $dark-color 2px;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+input[type=submit] {
+  margin-top: 2rem;
+  width: 100%;
+  color: $light-color;
+  border: none;
+  background-color: $third-color;
+  font-size: 1.3rem;
+
+  &:hover {
+    background-color: $dark-third-color;
+  }
+
+
+  &:active {
+    background-color: $light-color;
+    color: $third-color;
+  }
+}
+.input-valid{
+  color: red;
+  position: absolute;
+  bottom:-0.3rem;
+  font-size: 0.9rem;
+}

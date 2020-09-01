@@ -1,0 +1,13 @@
+@import "./default/default.scss";
+
+#upload-payment-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  h1 {
+    position: relative;
+    &::after {
+      @include line-under(30%);
+    }
+  }
+
+}

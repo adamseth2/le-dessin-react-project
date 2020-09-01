@@ -1,0 +1,43 @@
+@import "./default/default.scss";
+
+$progress-bar-size: 0.5rem;
+
+#progress-bar {
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+  background-color: $light-color;
+  padding: 6rem 1rem;
+  z-index: 100000;
+  
+
+  
+  #outer-bar {
+    position: relative;
+    height: $progress-bar-size;
+    text-align: center;
+    background-color: $dark-color;
+    color: $dark-color;
+  }
+  p {
+    font-family: 'Roboto', sans-serif;
+    top: -22px;
+
+  }
+  #uploading-progress {
+    position: relative;
+    // top: -22px;
+  }
+  #inner-bar {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: $third-color;
+  }
+  #uploading-message {
+    font-family: 'Roboto', sans-serif;
+  }
+}
