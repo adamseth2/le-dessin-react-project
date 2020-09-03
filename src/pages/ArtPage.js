@@ -1,22 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import useFirestore from '../hooks/useFirestore';
 import Nav from '../components/Nav';
 import ArtPageItem from '../components/ArtPageItem';
 import Modal from '../components/Modal';
-function ArtPage() {
+function ArtPage({ clickedGalleryPhoto, setClickedGalleryPhoto }) {
+  const [doc, setDoc] = useState(null);
   const { docs } = useFirestore('images');
   const [clickedPhoto, setClickedPhoto] = useState(null);
-  let itemId = window.location.pathname.substring(5);
-  let doc;
-  if (docs) {
-    docs.forEach(loopDoc => {
-      if (loopDoc.id === itemId) {
-        doc = loopDoc;
-        console.log(doc);
-      }
-    });
-  }
+  let pathArray = window.location.hash.split('/');
+  let itemId = pathArray[pathArray.indexOf('Art') + 1];
+  console.log(itemId);
+
+  useEffect(() => {
+    if (clickedGalleryPhoto) {
+      setDoc(clickedGalleryPhoto);
+      setClickedGalleryPhoto(null);
+    } else if (docs) {
+      docs.forEach(loopDoc => {
+        if (loopDoc.id === itemId) {
+          setDoc(loopDoc);
+          console.log(doc);
+        }
+      });
+    }
+  }, [docs]);
+
   return (
     <div id='art-page'>
       <Nav />

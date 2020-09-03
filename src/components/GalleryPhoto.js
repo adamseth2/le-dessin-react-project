@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../scss/GalleryPhoto.scss';
 import { Link } from 'react-router-dom';
 
-function GalleryPhoto({ doc }) {
+function GalleryPhoto({ doc, setClickedGalleryPhoto }) {
   const { title, price, description, url, id } = doc;
-  let shortenDescription;
+  const [shortenDescription, setShortenDescription] = useState(false);
+
   const limitDescription = () => {
     const descriptionWordArray = description.split(' ', 16);
     console.log(descriptionWordArray);
-    shortenDescription = descriptionWordArray;
+    setShortenDescription(descriptionWordArray);
     if (descriptionWordArray.length === 16) {
-      shortenDescription =
-        descriptionWordArray.reduce((words, word) => words + ' ' + word) +
-        '...';
+      setShortenDescription(
+        descriptionWordArray.reduce((words, word) => words + ' ' + word) + '...'
+      );
     }
   };
-  limitDescription();
+  useEffect(() => {
+    limitDescription();
+  }, []);
 
   return (
-    <Link to={'/Art/' + id}>
+    <Link to={'/Art/' + id} onClick={() => setClickedGalleryPhoto(doc)}>
       <div className='gallery-photo'>
         <img src={url} alt='Artwork' />
         <div className='caption-box'>
