@@ -15,7 +15,10 @@ const ProgressBar = ({ name, file, title, price, dimension, description }) => {
   );
   const history = useHistory();
   useEffect(() => {
-    history.push('/Art/' + id);
+    if (id) {
+      console.log(id);
+      history.push('/Art/' + id);
+    }
   }, [id]);
 
   return (

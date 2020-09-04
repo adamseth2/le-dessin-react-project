@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div id='app'>
-      <Router basename='le-dessin-react-project'>
+      <Router basename={process.env.PUBLIC_URL}>
         <Route
           path='/'
           exact

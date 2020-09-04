@@ -16,10 +16,7 @@ function Title() {
   const checkIfApporitate = () => {
     const inappropriateWords = ['porn', 'fuck', 'shit', 'f#%k', 'sex'];
     let kanyeWestQuoteArray = kanyeWestQuote.split(' ');
-    console.log(kanyeWestQuoteArray);
     for (let inappropriateWord of inappropriateWords) {
-      console.log(inappropriateWord);
-      console.log(kanyeWestQuoteArray.indexOf(inappropriateWord));
       if (kanyeWestQuoteArray.indexOf(inappropriateWord) !== -1) {
         return false;
       }
