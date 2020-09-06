@@ -145,11 +145,11 @@ function UploadInfo({
               name='unitOfMeasure'
               id='unit-of-measure'
               onChange={dimensionHandler}>
+              <option value='px'>px</option>
               <option value='in'>in</option>
               <option value='ft'>ft</option>
               <option value='cm'>cm</option>
               <option value='m'>m</option>
-              <option value='px'>px</option>
             </select>
             {!validDimension && submitButtonPressed && (
               <label htmlFor='price' className='input-valid'>

@@ -27,4 +27,9 @@
   &::after {
     @include line-under(20%);
   }
+  @media only screen and (min-width: $computer-size) {
+    & {
+        margin: 5rem 20%;
+    }
+}
 }

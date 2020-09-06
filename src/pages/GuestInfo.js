@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import GuestInfoInput from '../components/GuestInfoInput';
 import GuestUpload from './GuestUpload';
 import DarkenBackdrop from '../components/DarkenBackdrop';
 
-function GuestInfo() {
+function GuestInfo({ name, setName }) {
   return (
     <React.Fragment>
       <GuestUpload />
       <DarkenBackdrop />
-      <GuestInfoInput />
+      <GuestInfoInput name={name} setName={setName} />
     </React.Fragment>
   );
 }

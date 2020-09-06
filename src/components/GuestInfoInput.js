@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import '../scss/GuestInfoInput.scss';
 import { useHistory } from 'react-router-dom';
-function GuestInfoInput() {
-  const [name, setName] = useState(null);
+function GuestInfoInput({ name, setName }) {
   const [valid, setValid] = useState(true);
   const history = useHistory();
 
@@ -40,7 +39,7 @@ function GuestInfoInput() {
         <input
           type='submit'
           value='Continue'
-          tabIndex='2 000'
+          tabIndex='2000'
           onClick={e => {
             e.preventDefault();
             if (name) history.push('/Guest/' + name);

@@ -9,7 +9,7 @@ function GalleryPhoto({ doc, setClickedGalleryPhoto }) {
   const limitDescription = () => {
     const descriptionWordArray = description.split(' ', 16);
     console.log(descriptionWordArray);
-    setShortenDescription(descriptionWordArray);
+    setShortenDescription(description);
     if (descriptionWordArray.length === 16) {
       setShortenDescription(
         descriptionWordArray.reduce((words, word) => words + ' ' + word) + '...'

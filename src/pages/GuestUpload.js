@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Nav from '../components/Nav';
 import UploadTitle from '../components/UploadTitle';
 import UploadInfo from '../components/UploadInfo';
 import UploadPayment from '../components/UploadPayment';
@@ -10,14 +9,14 @@ import '../scss/pages/GuestUpload.scss';
 import ProgressBar from '../components/ProgressBar';
 import DarkenBackdrop from '../components/DarkenBackdrop';
 
-function GuestUpload() {
+function GuestUpload({ name, setName }) {
   const [file, setFile] = useState(null);
   const [title, setTitle] = useState(null);
   const [price, setPrice] = useState(null);
   const [dimension, setDimension] = useState({
     firstDimension: null,
     secondDimension: null,
-    unitOfMeasure: 'in',
+    unitOfMeasure: 'px',
   });
   const [description, setDescription] = useState(null);
   const [readyToUpload, setReadyToUpload] = useState(null);
@@ -28,9 +27,19 @@ function GuestUpload() {
   const [validDescription, setValidDescription] = useState(false);
   const [submitButtonPressed, setSubmitButtonPressed] = useState(false);
 
-  const name = 'Guest ' + window.location.pathname.substring(7);
-  console.log(dimension);
-  console.log('dimension is ' + validDimension);
+  useEffect(() => {
+    if (name) {
+      const windowHashUrlArray = window.location.hash.split('/');
+      console.log(windowHashUrlArray);
+      const nameUrl =
+        windowHashUrlArray[windowHashUrlArray.indexOf('Guest') + 1];
+      // nameUrl.replace('', '%20');
+      // setName('Guest ' + nameUrl);
+    }
+  }, []);
+  console.log('name is ' + name);
+  // console.log(window.location.hash);
+
   useEffect(() => {}, [submitButtonPressed]);
 
   const submitHandler = e => {
@@ -47,11 +56,9 @@ function GuestUpload() {
     } else setNotValidToSubmit(true);
 
     setSubmitButtonPressed(true);
-    // if (notValidToSubmit) setReadyToUpload(true);
   };
   return (
     <React.Fragment>
-      <Nav />
       <div id='guest-upload'>
         <UploadTitle />
         <UploadFile

@@ -6,6 +6,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 98%;
+    width: 95%;
   }
+      @media only screen and (min-width: $computer-size) {
+        img {
+          width: 30%;
+        }
+    }
+
 }

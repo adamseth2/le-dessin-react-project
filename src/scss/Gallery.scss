@@ -2,7 +2,7 @@
 
 #gallery {
     text-align: center;
-    margin: 8rem 3rem 4rem 3rem;
+    margin: 8rem 20% 4rem 20%;
     h1 {
         position: relative;
         margin-bottom: 3rem;
@@ -11,6 +11,13 @@
             @include line-under(60%);
         }
     }
-
+    @media only screen and (min-width: $computer-size) {
+        #grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 250px);
+            column-gap: 3%;
+            justify-content: center;
+        }
+      }
 }
 

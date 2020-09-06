@@ -4,15 +4,15 @@
 .LoginInput {
   background-color: $light-color;
   box-shadow: 0 10px 10px 0 rgba(black, 0.4);
-  padding: 0 5%;
-  width: 80vw;
+  padding: 0 2rem;
+  // width: 200%;
   padding-top: 1em;
 
   .log-in-as-guest-btn {
     margin: 2em 0;
     color: $dark-color;
     width: 100%;
-  
+    position: relative;
     &:hover {
       background-color: $dark-color;
       color: $light-color;
@@ -30,8 +30,8 @@
     }
     .log-in-icon {
       position: absolute;
-      left: 3rem;
-      top: -0.1rem;
+      left: 2rem;
+      top: -0.15rem;
     }
   }
   

@@ -8,14 +8,16 @@ function Gallery({ setClickedGalleryPhoto }) {
   return (
     <div id='gallery'>
       <h1>Gallery</h1>
-      {docs &&
-        docs.map(doc => (
-          <GalleryPhoto
-            key={doc.id}
-            doc={doc}
-            setClickedGalleryPhoto={setClickedGalleryPhoto}
-          />
-        ))}
+      <div id='grid-wrapper'>
+        {docs &&
+          docs.map(doc => (
+            <GalleryPhoto
+              key={doc.id}
+              doc={doc}
+              setClickedGalleryPhoto={setClickedGalleryPhoto}
+            />
+          ))}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import '../scss/pages/ArtPage.scss';
 
 import useFirestore from '../hooks/useFirestore';
-import Nav from '../components/Nav';
 import ArtPageItem from '../components/ArtPageItem';
 import Modal from '../components/Modal';
 function ArtPage({ clickedGalleryPhoto, setClickedGalleryPhoto }) {
@@ -28,7 +28,6 @@ function ArtPage({ clickedGalleryPhoto, setClickedGalleryPhoto }) {
 
   return (
     <div id='art-page'>
-      <Nav />
       <ArtPageItem doc={doc} setClickedPhoto={setClickedPhoto} />
       {clickedPhoto && (
         <Modal clickedPhoto={clickedPhoto} setClickedPhoto={setClickedPhoto} />

@@ -1,0 +1,12 @@
+@import '../default/default.scss';
+
+#art-page {
+  
+  @media only screen and (min-width: $computer-size) {
+    & {
+        margin: 0rem 25%;
+        // max-width: 500px;
+    }
+}
+
+}
