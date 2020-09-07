@@ -10,9 +10,10 @@ function Gallery({ setClickedGalleryPhoto }) {
       <h1>Gallery</h1>
       <div id='grid-wrapper'>
         {docs &&
-          docs.map(doc => (
+          docs.map((doc, photoNumber) => (
             <GalleryPhoto
               key={doc.id}
+              photoNumber={photoNumber}
               doc={doc}
               setClickedGalleryPhoto={setClickedGalleryPhoto}
             />

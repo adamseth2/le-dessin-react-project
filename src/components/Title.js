@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { title } from '../scss/Title.module.scss';
-
+import { motion } from 'framer-motion';
 function Title() {
   const [kanyeWestQuote, setKanyeWestQuote] = useState(null);
   const [appropriateQuote, setAppropriateQuote] = useState(false);
@@ -31,12 +31,18 @@ function Title() {
     } else setAppropriateQuote(true);
   }, [kanyeWestQuote]);
   return (
-    <div className={title}>
+    <motion.div
+      className={title}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+      // transition={{ delay: 0.5 }}
+    >
       {appropriateQuote && (
         <h2 className='kanye-west-quote'>{kanyeWestQuote}</h2>
       )}
       <p>-Kanye West</p>
-    </div>
+    </motion.div>
   );
 }
 

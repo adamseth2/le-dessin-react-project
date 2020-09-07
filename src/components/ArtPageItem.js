@@ -55,7 +55,9 @@ const ArtPageItem = ({ doc, setClickedPhoto }) => {
           </tr>
         </tbody>
       </table>
-      <button className='buy-now'>
+      <button
+        className='buy-now'
+        onClick={() => alert('This feature is not yet implemented ')}>
         <i className='fa fa-shopping-cart'></i> Buy now
       </button>
     </div>

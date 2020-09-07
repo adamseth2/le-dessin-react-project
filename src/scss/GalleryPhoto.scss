@@ -1,11 +1,14 @@
 @import './default/default.scss';
 .gallery-photo {
   color: white;
-  box-shadow: 0px 10px 10px 0 rgba(0,0,0,0.3);
+  box-shadow: 0px 10px 10px 0 rgba(0,0,0,0.5);
   transition: 0.5s;
   margin-bottom: 1rem;
   &:hover {
     transform: scale(1.1);
+  box-shadow: 0px 10px 20px 0 rgba(0,0,0,0.4);
+  z-index: 100000;
+
   }
   img{
     width: 100%;
