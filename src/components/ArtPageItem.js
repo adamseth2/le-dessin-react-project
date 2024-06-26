@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../scss/ArtPageItem.scss';
-import { timestamp } from '../firebase/config';
+import { serverTimestamp } from 'firebase/firestore';
 
 const ArtPageItem = ({ doc, setClickedPhoto }) => {
   let name, title, price, dimension, description, url, createdOn;
@@ -10,7 +10,7 @@ const ArtPageItem = ({ doc, setClickedPhoto }) => {
     dimension = `${firstDimension} x ${secondDimension} ${unitOfMeasure}`;
   };
   const convertDate = seconds => {
-    const currentTime = timestamp().seconds * 1000;
+    const currentTime = serverTimestamp().seconds * 1000;
     let secondCounter = seconds;
     createdOn = new Date(seconds).toLocaleDateString('en-US');
     console.log(createdOn);

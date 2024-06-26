@@ -5,6 +5,8 @@ import {
   timestamp,
 } from '../firebase/config';
 
+import { collection, doc, getDoc } from '@firebase/firestore';
+
 const useStorage = (name, file, title, price, dimension, description) => {
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
@@ -13,7 +15,7 @@ const useStorage = (name, file, title, price, dimension, description) => {
   useEffect(() => {
     const storageRef = projectStorage.ref(file.name);
     console.log('File name is ' + file.name);
-    const collectionRef = projectFirestore.collection('images');
+    const collectionRef = collection('images');
 
     storageRef.put(file).on(
       'state_changed',
